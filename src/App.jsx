@@ -1,17 +1,21 @@
+import { Home } from "./components/pages/Home/Home.jsx";
+import { ItemListContainer } from "./components/pages/ItemListContainer/ItemListContainer.jsx";
+import { Navegacion } from "./components/layouts/navbar/Navbar.jsx";
+import { Footer } from "./components/layouts/footer/Footer.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 function App() {
-  const saludar = () => {
-    console.log("Hola como estas? bienvendio");
-  };
-
-  return (
-    <button
-      onClick={saludar}
-      style={{ backgroundColor: "yellow", padding: "10px 20px" }}
-    >
-      saludar
-    </button>
-  );
+ return (
+   <div style={{backgroundColor:"gray"}}>
+     <Navegacion />
+    <ItemListContainer />
+    <h4>Mariana Padelin - Comisión 43240</h4>
+    <Home />
+    <Footer />
+   </div>
+ );
 }
 
 export default App;
