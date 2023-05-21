@@ -61,7 +61,7 @@ export const Navegacion = () => {
             aria-label="Buscar"
             style={{ backgroundColor: "lightcoral", paddingInline: "1vw" }}
           />
-          <Button variant="outline-dark">Search</Button>
+          <Button variant="outline-dark">Buscar</Button>
         </Form>
         <CartWidget />
       </Container>
