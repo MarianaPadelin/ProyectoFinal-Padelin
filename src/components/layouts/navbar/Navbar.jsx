@@ -56,7 +56,6 @@ export const Navegacion = () => {
           <Form.Control
             type="search"
             placeholder="Buscar producto"
-            placeholderTextColor="black"
             className="me-2"
             aria-label="Buscar"
             style={{ backgroundColor: "lightcoral", paddingInline: "1vw" }}
