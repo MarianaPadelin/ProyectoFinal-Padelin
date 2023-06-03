@@ -33,7 +33,23 @@ export const Navegacion = () => {
           <NavDropdown.Item>Tazas</NavDropdown.Item>
           <NavDropdown.Item>Mates</NavDropdown.Item>
           <NavDropdown.Item>Platos</NavDropdown.Item>
-          <NavDropdown.Item>Macetas</NavDropdown.Item>
+          <NavDropdown.Item>Bowls y compoteras</NavDropdown.Item>
+          <NavDropdown.Item>Jaboneras</NavDropdown.Item>
+          <NavDropdown.Item>Chopps</NavDropdown.Item>
+        </NavDropdown>
+        <NavDropdown
+          style={{ paddingInline: "1vw" }}
+          menuVariant="dark"
+          title="Líneas"
+          id="basic-nav-dropdown"
+        >
+          <NavDropdown.Item>Acuarela</NavDropdown.Item>
+          <NavDropdown.Item>Sandía</NavDropdown.Item>
+          <NavDropdown.Item>Cítricos</NavDropdown.Item>
+          <NavDropdown.Item>Rococó</NavDropdown.Item>
+          <NavDropdown.Item>Flores</NavDropdown.Item>
+          <NavDropdown.Item>Gatitos</NavDropdown.Item>
+          <NavDropdown.Item>Crackelado</NavDropdown.Item>
         </NavDropdown>
         <NavDropdown
           style={{ paddingInline: "1vw" }}
