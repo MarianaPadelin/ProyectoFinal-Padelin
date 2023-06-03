@@ -15,7 +15,7 @@ export const ItemListPresentacional = ({greeting}) => {
         }}
       >
         <Image
-          src="src\Logo.jpeg"
+          src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1685833673/productos/Logo_ve995f.jpg"
           style={{ opacity: "70%", width: "20%" }}
           className="Imagen"
           roundedCircle
@@ -23,9 +23,7 @@ export const ItemListPresentacional = ({greeting}) => {
 
         <h1>{greeting}</h1>
 
-        <img
-          src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1684851787/pez4jlmuc1evdofiprqx.jpg"
-        ></img>
+        <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1684851787/pez4jlmuc1evdofiprqx.jpg"></img>
       </Container>
     </div>
   );

@@ -1,4 +1,5 @@
 import Navbar from "react-bootstrap/Navbar";
+import Image from "react-bootstrap/Image";
 
 const Footer = () => {
   return (
@@ -9,12 +10,13 @@ const Footer = () => {
         }}
       >
         <Navbar.Brand href="#home">
-          <img
+          <Image
             alt="logo"
-            src="src\Logo.jpeg"
+            src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1685833673/productos/Logo_ve995f.jpg"
             width="30"
             height="30"
             className="d-inline-block align-top"
+            roundedCircle
           />{" "}
           MGGM
         </Navbar.Brand>

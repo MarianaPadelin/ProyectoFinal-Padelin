@@ -5,18 +5,19 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { CartWidget } from "./CartWidget.jsx";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
+import Image from "react-bootstrap/Image";
 
 export const Navegacion = () => {
   return (
     <Navbar expand="lg" style={{ display: "flex" }}>
       <Container style={{ display: "flex" }}>
         <Navbar.Brand href="#home">
-          <img
-            src="src/Logo.jpeg"
+          <Image
+            src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1685833673/productos/Logo_ve995f.jpg"
             width="60"
             className="d-inline-block align-top"
             alt="Logo"
+            roundedCircle
           />
         </Navbar.Brand>
         <Navbar.Brand href="#home">MGGM</Navbar.Brand>
