@@ -51,15 +51,13 @@ export const DetallePresentacional = ({ seleccionado }) => {
           <br></br>
           <Card.Title as="h3">
             ${seleccionado.price}
-            {seleccionado.stock > 0 ? (
+            {seleccionado.stock > 0 && (
               <Contador
                 stock={seleccionado.stock}
                 initial={1}
                 onAdd={onAdd}
               />
-            ) : (
-              <h3>No hay stock</h3>
-            )}
+            ) }
             
           </Card.Title>
           <br></br>

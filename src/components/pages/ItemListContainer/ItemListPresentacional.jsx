@@ -25,6 +25,7 @@ export const ItemListPresentacional = ({greeting, items}) => {
           return <ProductCard key={elemento.id} elemento={elemento} />;
         })}
       </div>
+
     </div>
   );
 };

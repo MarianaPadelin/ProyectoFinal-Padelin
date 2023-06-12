@@ -9,13 +9,16 @@ export const ItemListContainer = () => {
   const { category } = useParams();
   const { linea } = useParams();
  
-  //falta el contador
   useEffect(()=> {
       let productosPorCategoria = products.filter((producto)=>producto.category === category)
       const tarea = new Promise((resolve, reject) => {
         setTimeout(()=>{
-          resolve(category ? productosPorCategoria : products);
-          //no anda el false
+
+          if (category) {
+            resolve(productosPorCategoria);
+          } else {
+            resolve(products);
+          }
           reject("algo salio mal")}, 1000)
           
       });
@@ -36,8 +39,11 @@ useEffect(() => {
       );
       const tarea = new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(linea ? productosPorLinea : products);
-          //no anda el false
+          if (linea) {
+            resolve(productosPorLinea);
+          } else {
+            resolve(products);
+          }
           reject("algo salio mal");
         }, 1000);
       });

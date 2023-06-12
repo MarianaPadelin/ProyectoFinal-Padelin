@@ -7,10 +7,8 @@ import {products} from "../../../productsMock"
 
 const DetalleContainer = () => {
       const[seleccionado, setSeleccionado] = useState({})
-      console.log(seleccionado)
 
       const { id } = useParams();
-      console.log(id);
 
       useEffect(() => {
         let productoEncontrado = products.find((product) => product.id === +id);
