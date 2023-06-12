@@ -3,7 +3,7 @@
     border-color: beige;
     width: 300px;
     height: 450px;
-    margin-bottom: 10px;
+    margin: 6px !important;
 }
 
 .imgTarjeta {
@@ -22,4 +22,17 @@
 
 .botonComprar {
     opacity: 80%;
+}
+
+.botonComprar:hover{
+    background-color: lightcoral;
+    opacity: 100%;
+}
+
+.detalle:hover{
+    background-color: lightcoral;
+}
+
+.detalle{
+    margin:2%;
 }

@@ -1,19 +1,12 @@
 import Image from "react-bootstrap/Image";
-import { Container } from "react-bootstrap";
+import ProductCard from "../../common/ProductCard/ProductCard";
+import "./ItemList.css"
 
-export const ItemListPresentacional = ({greeting}) => {
+
+export const ItemListPresentacional = ({greeting, items}) => {
   return (
     <div>
-      <Container
-        className="Container fluid"
-        style={{
-          backgroundColor: "CadetBlue",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 20,
-        }}
-      >
+      <div className="greeting" >
         <Image
           src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1685833673/productos/Logo_ve995f.jpg"
           style={{ opacity: "70%", width: "20%" }}
@@ -23,8 +16,15 @@ export const ItemListPresentacional = ({greeting}) => {
 
         <h1>{greeting}</h1>
 
-        <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1684851787/pez4jlmuc1evdofiprqx.jpg"></img>
-      </Container>
+        <Image src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1684851787/pez4jlmuc1evdofiprqx.jpg" className="Imagen" />
+      </div>
+
+      <br></br>
+      <div className="cards-container">
+        {items.map((elemento) => {
+          return <ProductCard key={elemento.id} elemento={elemento} />;
+        })}
+      </div>
     </div>
   );
 };

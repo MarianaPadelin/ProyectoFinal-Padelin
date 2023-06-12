@@ -1,8 +1,0 @@
-.cards-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-left: 10vw;
-  margin-right: 5vw;
-}

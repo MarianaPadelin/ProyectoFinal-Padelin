@@ -16,10 +16,12 @@ const Footer = () => {
             width="30"
             height="30"
             className="d-inline-block align-top"
+            style={{marginLeft:20}}
             roundedCircle
           />{" "}
           MGGM
         </Navbar.Brand>
+        <h4>Mariana Padelin - Comisión 43240</h4>
       </Navbar>
     </div>
   );

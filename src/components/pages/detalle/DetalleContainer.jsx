@@ -1,9 +1,32 @@
+import { useState, useEffect } from "react"
 import {DetallePresentacional} from "./DetallePresentacional"
+import {useParams} from "react-router-dom"
+import {products} from "../../../productsMock"
+
+
 
 const DetalleContainer = () => {
-  return (
-    <DetallePresentacional />
-  )
-}
+      const[seleccionado, setSeleccionado] = useState({})
+      console.log(seleccionado)
+
+      const { id } = useParams();
+      console.log(id);
+
+      useEffect(() => {
+        let productoEncontrado = products.find((product) => product.id === +id);
+
+        const getProduct = new Promise((res) => {
+          res(productoEncontrado);
+        });
+
+        getProduct
+          .then((res) => setSeleccionado(res))
+          .catch((err) => console.log(err));
+      }, [id]);
+
+        return (
+          <DetallePresentacional seleccionado={seleccionado}/>
+        )
+      }
 
 export default DetalleContainer

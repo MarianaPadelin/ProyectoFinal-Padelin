@@ -1,0 +1,21 @@
+.navbar{
+    background-color: lightcoral;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+    margin-left: 5%;
+    
+}
+
+#titulo {
+vertical-align: middle;
+}
+
+a:hover {
+  text-decoration: none;
+  color:inherit;
+}
