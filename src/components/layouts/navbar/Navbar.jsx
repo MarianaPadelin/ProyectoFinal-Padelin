@@ -8,7 +8,6 @@ import Image from "react-bootstrap/Image";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-//el dropdown no se va al hacer click
 export const Navegacion = () => {
   return (
     <Navbar expand="md" style={{ display: "flex" }}>

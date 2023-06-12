@@ -4,7 +4,7 @@ import "./ProductCard.css"
 import { Button } from "react-bootstrap";
 
 export const Contador = ({ stock, initial, onAdd }) => {
-  const { count, decrement, increment } = useCount(initial, stock);
+  const { total, restar, sumar } = useCount(initial, stock);
 
   return (
     <>
@@ -13,16 +13,16 @@ export const Contador = ({ stock, initial, onAdd }) => {
           className="detalle"
           size="sm"
           variant="outline-dark"
-          onClick={decrement}
+          onClick={restar}
         >
           -
         </Button>
-        <span>{count}</span>
+        <span>{total}</span>
         <Button
           className="detalle"
           size="sm"
           variant="outline-dark"
-          onClick={increment}
+          onClick={sumar}
         >
           +
         </Button>
@@ -30,7 +30,7 @@ export const Contador = ({ stock, initial, onAdd }) => {
           <Button
             className="botonComprar"
             variant="dark"
-            onClick={() => onAdd(count)}
+            onClick={() => onAdd(total)}
           >
             Agregar al carrito
           </Button>

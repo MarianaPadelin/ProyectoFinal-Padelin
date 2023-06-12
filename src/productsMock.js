@@ -457,8 +457,8 @@ export const products = [
     stock: 4,
     tamaño: "9 x 13 cm",
     description: "Capacidad 570 ml.",
-    category: "Bowl",
-    linea: "Acuarela",
+    category: "Chopp",
+    linea: "Crackelado",
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802333/productos/f96d40c1-f886-4c22-9eb5-cf1d787fd9d0_wn3rat.jpg",
   },
 ];
