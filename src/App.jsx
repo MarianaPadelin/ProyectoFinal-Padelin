@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ItemListContainer } from "./components/pages/ItemListContainer/ItemListContainer.jsx";
 import DetalleContainer from "./components/pages/detalle/DetalleContainer.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CarritoContainer from "./components/pages/carrito/carritoContainer.jsx";
+import CarritoContainer from "./components/pages/carrito/CarritoContainer.jsx";
 import Layouts from "./components/layouts/Layouts.jsx";
 import Error from "./components/pages/error/Error.jsx";
 
