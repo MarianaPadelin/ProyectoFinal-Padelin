@@ -1,4 +1,19 @@
 .botonVolver {
-    background-color: lightcoral;
-    border:none;
+  background-color: lightcoral;
+  border: none;
+  margin-left: 3vw;
+  margin-bottom: 1vh;
+}
+
+.botonVolver:hover {
+  background-color: cadetblue;
+}
+
+.carritoVacio {
+  display: flexbox;
+  margin: 3vw;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  
 }

@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 import { useCount } from "../../../hooks/useCount";
-import "./ProductCard.css"
+import "./ProductCard.css";
 import { Button } from "react-bootstrap";
 
-export const Contador = ({ stock, initial, onAdd }) => {
+export const Contador = ({ stock, initial = 1, onAdd }) => {
   const { total, restar, sumar } = useCount(initial, stock);
 
   return (
@@ -26,15 +25,14 @@ export const Contador = ({ stock, initial, onAdd }) => {
         >
           +
         </Button>
-        <Link to="/Carrito">
-          <Button
-            className="botonComprar"
-            variant="dark"
-            onClick={() => onAdd(total)}
-          >
-            Agregar al carrito
-          </Button>
-        </Link>
+
+        <Button
+          className="botonComprar"
+          variant="dark"
+          onClick={() => onAdd(total)}
+        >
+          Agregar al carrito
+        </Button>
       </div>
     </>
   );

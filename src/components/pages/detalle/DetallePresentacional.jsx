@@ -1,20 +1,13 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
-import "./Detalle.css"
+import "./Detalle.css";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Contador } from "../../common/ProductCard/Contador";
 
-export const DetallePresentacional = ({ seleccionado }) => {
-   const onAdd = (cantidad) => {
-     let data = {
-       ...seleccionado,
-       quantity: cantidad,
-     };
+export const DetallePresentacional = ({seleccionado, cantidadDeProductos, onAdd}) => {
 
-     console.log(data);
-   };
   return (
     <div>
       <Card className="card">
@@ -51,14 +44,13 @@ export const DetallePresentacional = ({ seleccionado }) => {
           <br></br>
           <Card.Title as="h3">
             ${seleccionado.price}
-            {seleccionado.stock > 0 && (
+            {seleccionado.stock > 0 ? (
               <Contador
                 stock={seleccionado.stock}
-                initial={1}
+                initial={cantidadDeProductos}
                 onAdd={onAdd}
               />
-            ) }
-            
+            ): <Card.Footer as="h3">SIN STOCK</Card.Footer>}
           </Card.Title>
           <br></br>
           <Link to="/">
@@ -68,5 +60,4 @@ export const DetallePresentacional = ({ seleccionado }) => {
       </Card>
     </div>
   );
-}
-
+};

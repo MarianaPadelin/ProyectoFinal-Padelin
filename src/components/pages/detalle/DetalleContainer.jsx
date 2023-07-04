@@ -1,7 +1,11 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import {DetallePresentacional} from "./DetallePresentacional"
 import {useParams} from "react-router-dom"
-import {products} from "../../../productsMock"
+import { database } from "../../../firebaseConfig"
+import {collection, getDoc, doc} from "firebase/firestore"
+import Loader from "../../common/loader"
+import { CartContext } from "../../../context/CartContext"
+import Swal from "sweetalert2"
 
 
 
@@ -9,22 +13,58 @@ const DetalleContainer = () => {
       const[seleccionado, setSeleccionado] = useState({})
 
       const { id } = useParams();
+      const { agregarProductos, cantidad} = useContext(CartContext)
+      const cantidadDeProductos = cantidad(id)
+
+      const onAdd = (cantidad) => {
+          let data = {
+            ...seleccionado,
+            quantity: cantidad,
+          };
+
+          agregarProductos(data)
+       const Toast = Swal.mixin({
+         toast: true,
+         position: "center",
+         showConfirmButton: false,
+         timer: 2000,
+         timerProgressBar: true,
+
+         color: "cadetBlue",
+         didOpen: (toast) => {
+           toast.addEventListener("mouseenter", Swal.stopTimer);
+           toast.addEventListener("mouseleave", Swal.resumeTimer);
+         },
+       });
+
+       Toast.fire({
+         icon: "success",
+         title: "El producto se agregó al carrito",
+       });
+          
+        };
 
       useEffect(() => {
-        let productoEncontrado = products.find((product) => product.id === +id);
+        let coleccion = collection(database, "products")
+        let refDoc = doc(coleccion, id)
+        getDoc(refDoc).then((elemento) => {setSeleccionado({...elemento.data(), id: elemento.id})}).catch((err)=>{console.log(err)})
 
-        const getProduct = new Promise((res) => {
-          res(productoEncontrado);
-        });
+        //ver qué poner en el error
 
-        getProduct
-          .then((res) => setSeleccionado(res))
-          .catch((err) => console.log(err));
+
       }, [id]);
 
+
         return (
-          <DetallePresentacional seleccionado={seleccionado}/>
+          <div>
+            {seleccionado.id ? (<DetallePresentacional seleccionado={seleccionado} agregarProductos={agregarProductos} cantidadDeProductos={cantidadDeProductos} onAdd={onAdd}/>) : (<Loader />) }
+          </div>
+          
         )
+
+      
       }
+
+
 
 export default DetalleContainer

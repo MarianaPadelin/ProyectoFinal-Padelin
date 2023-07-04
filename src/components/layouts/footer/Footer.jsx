@@ -7,6 +7,10 @@ const Footer = () => {
       <Navbar
         style={{
           backgroundColor: "CadetBlue",
+          display: "flex",
+          position:"fixed",
+          bottom: "0",
+          width:"93.5%",
         }}
       >
         <Navbar.Brand href="#home">
@@ -16,7 +20,7 @@ const Footer = () => {
             width="30"
             height="30"
             className="d-inline-block align-top"
-            style={{marginLeft:20}}
+            style={{ marginLeft: 20 }}
             roundedCircle
           />{" "}
           MGGM

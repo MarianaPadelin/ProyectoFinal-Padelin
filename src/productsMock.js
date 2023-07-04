@@ -8,6 +8,7 @@ export const products = [
     description: "Capacidad 150 ml, 2 unidades.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.5,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801646/productos/813168d7-e172-4cdb-9ed2-f2b091ce64bf_emt2sk.jpg",
   },
   {
@@ -19,17 +20,19 @@ export const products = [
     description: "Capacidad 150 ml, 2 unidades.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.5, 
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801876/productos/4812f340-b66f-4541-ba52-3406ef2e5e43_dq6n5l.jpg",
   },
   {
     id: 3,
     title: "Taza mug verde",
     price: 9000,
-    stock: 5,
+    stock: 0,
     tamaño: "9 x 2 cm",
     description: "Taza realizada en torno. Capacidad 250 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801891/productos/138547ff-996a-4f37-8ea5-c92cae2b6556_ya9gzb.jpg",
   },
   {
@@ -41,6 +44,7 @@ export const products = [
     description: "Taza realizada en torno. Capacidad 200 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801910/productos/d0d5a2dc-f5ba-4da3-8d9c-14dc72664400_x8aqyr.jpg",
   },
   {
@@ -52,6 +56,7 @@ export const products = [
     description: "Taza realizada en torno. Capacidad 250 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801922/productos/b0c26f0e-528e-4b66-87a6-613c3e0b2f5d_zbcscx.jpg",
   },
   {
@@ -63,6 +68,7 @@ export const products = [
     description: "Taza realizada en torno. Capacidad 250 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801646/productos/813168d7-e172-4cdb-9ed2-f2b091ce64bf_emt2sk.jpg",
   },
   {
@@ -74,6 +80,7 @@ export const products = [
     description: "Taza realizada en torno. Capacidad 250 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801932/productos/346c2319-db54-490f-8d3f-0d20fe1f29a9_zgeiof.jpg",
   },
   {
@@ -85,6 +92,7 @@ export const products = [
     description: "Capacidad 600 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.6,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801938/productos/dcc93913-468c-4bb8-b178-cb00ec4dfd20_jlwa2g.jpg",
   },
   {
@@ -96,6 +104,7 @@ export const products = [
     description: "Capacidad 400 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.7,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801951/productos/1da0e043-72e4-4512-8191-5521db00cb32_dz9byn.jpg",
   },
   {
@@ -107,6 +116,7 @@ export const products = [
     description: "Capacidad 600 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.6,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801954/productos/8e865c68-0775-4e20-9a43-e06bdb723e8f_f95l30.jpg",
   },
   {
@@ -118,6 +128,7 @@ export const products = [
     description: "Capacidad 600 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.6,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801962/productos/fa081878-b73d-47fe-94ec-a3e5264f337e_h2pxix.jpg",
   },
   {
@@ -129,6 +140,7 @@ export const products = [
     description: "Capacidad 150 ml, 2 unidades.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.5,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685801980/productos/5a3b46c0-8b4b-48cd-bc1c-1af38dbe20af_wmbucy.jpg",
   },
   {
@@ -140,6 +152,7 @@ export const products = [
     description: "Capacidad 150 ml.",
     category: "Tazas",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802001/productos/b2a3d6fd-126c-447b-aa48-ced705a30352_mkot0s.jpg",
   },
   {
@@ -151,6 +164,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Acuarela",
+    peso: 0.5,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802011/productos/24db5cbc-47aa-490e-bafa-f1f95ff6682c_yyius7.jpg",
   },
   {
@@ -162,6 +176,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Acuarela",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802020/productos/4d9d0d42-7e35-49d9-ba18-8ec5101412a5_b3qvx0.jpg",
   },
   {
@@ -173,6 +188,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802031/productos/55627cd3-c71e-46e6-910d-fad9709f5bf9_ctd3di.jpg",
   },
   {
@@ -184,6 +200,7 @@ export const products = [
     description: "Embellecé tu baño con estas jaboneras.",
     category: "Jaboneras",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802038/productos/462a3f68-f1d4-4759-9945-df3c4f71c14a_ppwbfs.jpg",
   },
   {
@@ -195,6 +212,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mates",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802044/productos/6afd47e0-2018-4e87-b5dd-8694a843d87a_faoulk.jpg",
   },
   {
@@ -206,6 +224,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802055/productos/5511ce7c-a7e8-45c6-a4e2-0fd20e427510_soyige.jpg",
   },
   {
@@ -217,6 +236,7 @@ export const products = [
     description: "Gran tamaño, ideal para desayunos.",
     category: "Bowls",
     linea: "Sandía",
+    peso: 0.9,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802063/productos/bfc50507-65b8-4fb2-8aaa-92f35dd76e61_evj2ok.jpg",
   },
   {
@@ -228,6 +248,7 @@ export const products = [
     description: "Capacidad 300 ml.",
     category: "Tazas",
     linea: "Sandía",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685822453/productos/d31fda19-aa1f-49f5-a36e-1c418db01ba1_dxdtfa.jpg",
   },
   {
@@ -239,6 +260,7 @@ export const products = [
     description: "Ideal para salsas y dips. 2 Unidades.",
     category: "Bowls",
     linea: "Sandía",
+    peso: 1,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802077/productos/40bcbf22-a850-4f62-8dc5-8aba0c2213a9_yxhe58.jpg",
   },
   {
@@ -250,6 +272,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Sandía",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802086/productos/46f83599-3167-4af1-84b7-eb19656f2f4f_j39ymz.jpg",
   },
   {
@@ -261,6 +284,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Sandía",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802095/productos/46f83599-3167-4af1-84b7-eb19656f2f4f_hlpazx.jpg",
   },
   {
@@ -272,6 +296,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mates",
     linea: "Sandía",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802102/productos/ffd75779-a41b-460c-875b-7dc2f44ebc2e_efzj57.jpg",
   },
   {
@@ -283,6 +308,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mates",
     linea: "Sandía",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802107/productos/d7caf281-73ef-4410-baf4-9b4d99db01f4_vkq9fu.jpg",
   },
   {
@@ -294,6 +320,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mate",
     linea: "Cítricos",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802164/productos/342e9d92-0773-46d9-84e7-dac3f4901a7a_vvqlo5.jpg",
   },
   {
@@ -305,6 +332,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Cítricos",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802184/productos/c87cf556-73b1-433b-ae21-c8b05abcf64f_aydtdh.jpg",
   },
   {
@@ -316,17 +344,19 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Cítricos",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802189/productos/690c02bd-3f49-465d-bf84-3802e23a5d41_rfxnqu.jpg",
   },
   {
     id: 30,
     title: "Mini salsera rococó",
     price: 3500,
-    stock: 2,
+    stock: 0,
     tamaño: "8 x 3 cm",
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Rococó",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802223/productos/870b2bcd-b5f4-400d-943e-6b7c6970cc61_xv7jma.jpg",
   },
   {
@@ -338,6 +368,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Rococó",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802205/productos/bcfaa4f9-6439-4b35-995c-5a6d582f67e8_jtsfyo.jpg",
   },
   {
@@ -349,6 +380,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Rococó",
+    peso: 0.5,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802209/productos/309b11aa-667b-47bc-ae70-1dd61750434d_qbbxjh.jpg",
   },
   {
@@ -360,6 +392,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mates",
     linea: "Rococó",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802232/productos/0be8575e-deaf-4eaf-8b02-dc68cdc35cb4_rttjl8.jpg",
   },
   {
@@ -371,6 +404,7 @@ export const products = [
     description: "Capacidad 300 ml.",
     category: "Tazas",
     linea: "Rococó",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802235/productos/d5b939fd-531c-4281-a398-dab31dd1bad9_aqam0h.jpg",
   },
   {
@@ -382,6 +416,7 @@ export const products = [
     description: "Diámetro 25,5 cm.",
     category: "Platos",
     linea: "Flores",
+    peso: 1,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802257/productos/5e43392c-89d0-4424-9077-c7101677c105_ovbxcg.jpg",
   },
   {
@@ -393,6 +428,7 @@ export const products = [
     description: "Capacidad 500 ml.",
     category: "Bowls",
     linea: "Flores",
+    peso: 0.9,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802264/productos/654081b0-019f-462d-8a14-62143e2db26e_cfzoy3.jpg",
   },
   {
@@ -404,6 +440,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mates",
     linea: "Flores",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802279/productos/322cb133-9533-4131-9525-ab5cd89b8c09_ipix9f.jpg",
   },
   {
@@ -415,6 +452,7 @@ export const products = [
     description: "Los mates más ricos.",
     category: "Mates",
     linea: "Flores",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802287/productos/1b11cb7b-7137-44a4-93e2-41389a6a4d3b_qixnc2.jpg",
   },
   {
@@ -426,6 +464,7 @@ export const products = [
     description: "Ideal para salsas y dips.",
     category: "Bowls",
     linea: "Flores",
+    peso: 0.4,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802295/productos/0f4fdb80-bbfd-4efb-a6b1-b655e185eb84_u2s6ig.jpg",
   },
   {
@@ -437,6 +476,7 @@ export const products = [
     description: "Embellecé tu baño con estas jaboneras.",
     category: "Jaboneras",
     linea: "Acuarela",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802301/productos/45a8e8e3-e91a-4b14-b6ab-81ae78ff458a_w3gmal.jpg",
   },
   {
@@ -448,6 +488,7 @@ export const products = [
     description: "Ideal para salsas y dips. 2 unidades.",
     category: "Bowls",
     linea: "Gatitos",
+    peso: 0.3,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802315/productos/1951899d-6c87-4c59-b844-39ac577bc266_ogiqkl.jpg",
   },
   {
@@ -459,6 +500,7 @@ export const products = [
     description: "Capacidad 570 ml.",
     category: "Chopp",
     linea: "Crackelado",
+    peso: 0.9,
     img: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1685802333/productos/f96d40c1-f886-4c22-9eb5-cf1d787fd9d0_wn3rat.jpg",
   },
 ];
