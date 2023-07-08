@@ -2,12 +2,13 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { CartWidget } from "./CartWidget.jsx";
-
 import Image from "react-bootstrap/Image";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import IconoLogin from "./IconoLogin.jsx";
 import SearchBar from "./search/SearchBar.jsx";
+import { categorias } from "../../../routes/categorias.js";
+import { lineas } from "../../../routes/lineas.js";
+
 
 
 export const Navegacion = () => {
@@ -24,6 +25,8 @@ export const Navegacion = () => {
               roundedCircle
             />
           </Navbar.Brand>
+        </Link>
+        <Link to="/" title="Home">
           <Navbar.Brand id="titulo">MGGM</Navbar.Brand>
         </Link>
 
@@ -33,27 +36,11 @@ export const Navegacion = () => {
           title="Productos"
           id="basic-nav-dropdown"
         >
-          <Link to="/" className="dropdown-item" role="button" tabIndex="0">
-            Todos
-          </Link>
-          <Link to="Categorias/Tazas" className="dropdown-item">
-            Tazas
-          </Link>
-          <Link to="Categorias/Mates" className="dropdown-item">
-            Mates
-          </Link>
-          <Link to="Categorias/Platos" className="dropdown-item">
-            Platos
-          </Link>
-          <Link to="Categorias/Bowls" className="dropdown-item">
-            Bowls y compoteras
-          </Link>
-          <Link to="Categorias/Jaboneras" className="dropdown-item">
-            Jaboneras
-          </Link>
-          <Link to="Categorias/Chopp" className="dropdown-item">
-            Chopps
-          </Link>
+          {categorias.map(({ id, path, title }) => (
+            <Link className="dropdown-item" key={id} to={path}>
+              {title}
+            </Link>
+          ))}
         </NavDropdown>
         <NavDropdown
           style={{ paddingInline: "1vw" }}
@@ -61,30 +48,12 @@ export const Navegacion = () => {
           title="Líneas"
           id="basic-nav-dropdown"
         >
-          <Link to="/" className="dropdown-item">
-            Todas
-          </Link>
-          <Link to="Linea/Acuarela" className="dropdown-item">
-            Acuarela
-          </Link>
-          <Link to="Linea/Sandía" className="dropdown-item">
-            Sandía
-          </Link>
-          <Link to="Linea/Cítricos" className="dropdown-item">
-            Cítricos
-          </Link>
-          <Link to="Linea/Rococó" className="dropdown-item">
-            Rococó
-          </Link>
-          <Link to="Linea/Flores" className="dropdown-item">
-            Flores
-          </Link>
-          <Link to="Linea/Gatitos" className="dropdown-item">
-            Gatitos
-          </Link>
-          <Link to="Linea/Crackelado" className="dropdown-item">
-            Crackelado
-          </Link>
+          {lineas.map(({ id, path, title }) => (
+            <Link className="dropdown-item" key={id} to={path}>
+              {title}
+            </Link>
+          ))}
+         
         </NavDropdown>
         <NavDropdown
           style={{ paddingInline: "1vw" }}
@@ -104,9 +73,7 @@ export const Navegacion = () => {
         </NavDropdown>
 
         <SearchBar />
-        <IconoLogin />
         <CartWidget />
-      
       </Container>
     </Navbar>
   );

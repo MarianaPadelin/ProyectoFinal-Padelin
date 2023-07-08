@@ -17,8 +17,6 @@ const Checkout = ({ handleSubmit, handleChange, errors }) => {
             background:"lightgrey"
           },
         }}
-        // noValidate
-        // autoComplete="off"
       >
   
         <TextField

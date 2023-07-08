@@ -1,20 +1,42 @@
 import { useFormik } from "formik";
 import Checkout from "./Checkout";
 import * as Yup from "yup";
+import { database } from "../../../firebaseConfig";
+import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
+import { CartContext } from "../../../context/CartContext";
+import { useContext, useState } from "react";
+import CompraExitosa from "./CompraExitosa";
 
 const CheckoutContainer = () => {
-  const { handleChange, handleSubmit, errors } = useFormik({
-    initialValues: {
-      nombre: "123",
-      email: "",
-      telefono: "",
-    },
-    //data son los initialValues con la info ya completada
-    onSubmit: (data) => {
-      console.log(data);
-    },
+    const {cart, totalPrecio, limpiarCarrito} = useContext( CartContext)
+    let total = totalPrecio()
+    const [ordenID, setOrdenID] = useState(null)
+    const { handleChange, handleSubmit, errors } = useFormik({
+        initialValues: {
+        nombre: "123",
+        email: "",
+        telefono: "",
+        },
+    //infoDelComprador son los initialValues con la info ya completada por el usuario
+    onSubmit: (infoDelComprador) => {
+        let ordenDeCompra = {
+                    comprador: {infoDelComprador},
+                    items: cart,
+                    total: total
+                }
+                let ordenesDeCompra = collection(database, "orders")
+                addDoc(ordenesDeCompra, ordenDeCompra ).then((res)=>setOrdenID(res.id)).catch((err)=>console.log(err))
+                
+                cart.map((product)=>{
+                    updateDoc(doc(database, "products", product.id), {stock: product.stock - product.quantity})
+                })
+                //el updateDoc me pide la base de datos, la coleccion y el item que quiero modificar, y un objeto con solamente el o los att que quiera modificar. Se ejecuta una vez por cada producto del carrito. 
+
+                limpiarCarrito()
+            },
+
     validateOnChange: false,
-    validateOnBlur: false,
+    validateOnBlur: true,
     //validationSchema es de formik, ahi adentro uso yup
 
     validationSchema: Yup.object({
@@ -27,13 +49,19 @@ const CheckoutContainer = () => {
       telefono: Yup.string().required("Campo requerido"),
     }),
   });
-    console.log(errors)
+
   return (
-    <Checkout
-      handleSubmit={handleSubmit}
-      handleChange={handleChange}
-      errors={errors}
-    />
+    <div>
+      {ordenID ? (
+       <CompraExitosa ordenID={ordenID}/>
+      ) : (
+        <Checkout
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          errors={errors}
+        />
+      )}
+    </div>
   );
 };
 

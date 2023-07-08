@@ -21,7 +21,8 @@
 }
 
 .botonComprar {
-    opacity: 80%;
+    background-color: rgb(65, 105, 107);
+    border:none;
 }
 
 .botonComprar:hover{

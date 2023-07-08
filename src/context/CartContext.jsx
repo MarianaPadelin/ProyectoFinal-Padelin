@@ -71,11 +71,39 @@ const agregarProductos =(nuevo)=> {
   }, 0);
   return total;}
 
+  const precioConDescuento = () => {
+    let totalDescuento = totalPrecio()*0.9
+    return totalDescuento
+  }
+
   const totalPeso = () => {
     let total = cart.reduce((acc,elemento) => {
         return acc + (elemento.peso * elemento.quantity)
     }, 0)
     return total}
+
+const costoEnvio = () => {
+    if (totalPeso() < 1){
+        return 2340
+    }else if (totalPeso() >=1 && totalPeso()<5){
+        return 2850
+    }else if (totalPeso() >= 5 && totalPeso()<10){
+        return 3730
+    }else if (totalPeso() >=10 && totalPeso()<15){
+        return 4600
+    }else if (totalPeso() >= 15 && totalPeso() < 20) {
+      return 5400
+    } else {
+      return 6600
+    }
+}
+
+const sumaPrecios = () => {
+    let sumaPrecios = costoEnvio() + totalPrecio()
+    return sumaPrecios
+}
+
+
   //acá voy a poner todos los elementos que quiera usar en otro lado de la pagina
   let data = {
     cart,
@@ -85,7 +113,10 @@ const agregarProductos =(nuevo)=> {
     cantidad,
     totalElementos,
     totalPrecio,
-    totalPeso
+    precioConDescuento,
+    totalPeso,
+    costoEnvio, 
+    sumaPrecios
   };
 
   return (

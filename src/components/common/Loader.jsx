@@ -8,6 +8,8 @@ const Loader = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: "auto",
+          marginBottom: "auto",
         }}
       >
         <PulseLoader

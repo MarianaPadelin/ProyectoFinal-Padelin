@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Carrito.css";
 import List from "@mui/material/List";
@@ -10,11 +10,12 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Swal from "sweetalert2";
+import { Box, CardContent, Chip, Paper, TextField } from "@mui/material";
 
 
-const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, darPesoTotal }) => {
+const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, handleSubmit, handleChange, totalEnvio, precioFinal}) => {
   return (
-    <>
+    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
       <div>
         {cart.map((producto) => {
           return (
@@ -88,22 +89,72 @@ const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, darP
         <Button className="botonVolver" onClick={preguntaLimpiar}>
           Limpiar Carrito
         </Button>
+        <Link to="/">
+          <Button className="botonVolver">Volver</Button>
+        </Link>
       </div>
 
-      <Link to="/">
-        <Button className="botonVolver">Volver</Button>
-      </Link>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          "& > :not(style)": {
+            m: 1,
+            width: 300,
+            height: 530,
+            backgroundColor: "lightgrey",
+            justifyContent: "center",
+            padding: "5px",
+            margin: "3vw",
+          },
+        }}
+      >
+        <Paper elevation={10}>
+          <Card sx={{ minWidth: 275 }}>
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                RESUMEN DE COMPRA
+              </Typography>
+              <Divider>
+                <Chip label="ITEMS" />
+              </Divider>
+              <Typography variant="h5" component="div">
+                El precio de los productos es ${darPrecioTotal}
+              </Typography>
+              <br></br>
+              <form onSubmit={handleSubmit} color="text.secondary">
+                <Typography>INSERTE CÓDIGO DE DESCUENTO</Typography>
 
-      <h3>El total de la compra es:${darPrecioTotal}</h3>
-      <h4>
-        El peso de la encomienda es de {darPesoTotal} eso no lo ve el usuario.
-        El valor aproximado del envío es de ${" "}
-      </h4>
-      <Link to="/Checkout">
-    
-        <Button className="botonVolver">Finalizar compra</Button>
-      </Link>
-    </>
+                <TextField onChange={handleChange} name="codigo"></TextField>
+                <Button className="botonComprar" size="sm" type="submit">
+                  Aplicar código
+                </Button>
+              </form>
+              <br />
+              <Typography variant="body2">
+                El valor aproximado del envío es de ${totalEnvio}
+              </Typography>
+              <Divider>
+                <Chip label="TOTAL" />
+              </Divider>
+              <Typography variant="h5" align="center">
+                Precio final: ${precioFinal}
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Link to="/Checkout">
+            <Button style={{ marginLeft: 5 }} className="botonVolver">
+              Finalizar compra
+            </Button>
+          </Link>
+        </Paper>
+      </Box>
+    </div>
   );
 };
 

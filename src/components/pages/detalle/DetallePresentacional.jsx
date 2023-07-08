@@ -28,7 +28,7 @@ export const DetallePresentacional = ({seleccionado, cantidadDeProductos, onAdd}
               <Container className="containerImg">
                 <img
                   className="d-flex"
-                  src={seleccionado.img}
+                  src={seleccionado.img2}
                   alt="Segunda foto"
                   style={{ height: 400 }}
                 />

@@ -5,11 +5,11 @@ import { database } from "../../../firebaseConfig";
 import {collection, getDocs, query, where} from "firebase/firestore"
 import Loader from "../../common/loader";
 
+
 export const ItemListContainer = () => {
   let greeting = "¡Bienvenidos al sitio!";
   const [items, setItems] = useState([]);
   const { nombreCategoria } = useParams();
-
   const { nombreLinea } = useParams();
 
   useEffect(() => {
@@ -57,7 +57,9 @@ export const ItemListContainer = () => {
   return (
     <div>
       {items.length > 0 ? (
-        <ItemListPresentacional greeting={greeting} items={items} />
+        <div>
+          <ItemListPresentacional greeting={greeting} items={items} />
+        </div>
       ) : (
         <Loader />
       )}

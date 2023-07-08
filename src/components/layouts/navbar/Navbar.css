@@ -13,6 +13,8 @@
 
 #titulo {
 vertical-align: middle;
+font-size: x-large;
+font-weight: 600;
 }
 
 a:hover {

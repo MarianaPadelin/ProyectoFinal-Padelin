@@ -8,9 +8,9 @@ const Footer = () => {
         style={{
           backgroundColor: "CadetBlue",
           display: "flex",
-          position:"fixed",
           bottom: "0",
-          width:"93.5%",
+          width:"94%",
+          marginTop: "auto"
         }}
       >
         <Navbar.Brand href="#home">

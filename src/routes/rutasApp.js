@@ -1,9 +1,9 @@
 import { ItemListContainer } from "../components/pages/ItemListContainer/ItemListContainer"
 import CarritoContainer from "../components/pages/carrito/CarritoContainer";
+import CheckoutContainer from "../components/pages/checkout/CheckoutContainer";
 import DetalleContainer from "../components/pages/detalle/DetalleContainer";
-import Login from "../components/pages/login/Login";
 
-const rutasApp = () => [
+export const rutasApp = [
   {
     id: "home",
     path: "/",
@@ -31,14 +31,10 @@ const rutasApp = () => [
   },
   {
     id: "login",
-    path: "/Login",
-    Element: Login,
+    path: "/Checkout",
+    Element: CheckoutContainer,
   },
-//   {
-//     id: "firebase-auth",
-//     path: "/firebase-auth",
-//     element: FirebaseAuth
-//   }
+
+
 ];
 
-export default rutasApp
