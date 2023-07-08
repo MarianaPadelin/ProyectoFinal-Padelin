@@ -3,7 +3,7 @@ import {DetallePresentacional} from "./DetallePresentacional"
 import {useParams} from "react-router-dom"
 import { database } from "../../../firebaseConfig"
 import {collection, getDoc, doc} from "firebase/firestore"
-import Loader from "../../common/loader"
+import Loader from "../../common/Loader"
 import { CartContext } from "../../../context/CartContext"
 import Swal from "sweetalert2"
 
