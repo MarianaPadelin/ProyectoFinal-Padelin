@@ -5,18 +5,20 @@ import SearchBar from "./SearchBar";
 
 
 const SearchBarContainer = () => {
-      const { handleSubmit, handleChange, errors } = useFormik({
-      initialValues: {
-        busqueda:"",
-      },
-      onSubmit: (datosEnviados) => {
-        console.log("el formulario se envio");
-        console.log(datosEnviados);
-      // useNavigate(/)
-      }
-      })
+      const { handleSubmit, handleChange } = useFormik({
+        initialValues: {
+          searchbar: "",
+        },
+        isValidating: false, 
+        isSubmitting: true, 
+        onSubmit: (datosEnviados) => {
+          console.log(datosEnviados);
+          console.log("hola")
+          // useNavigate(/)
+        },
+      });
 
-  return <SearchBar handleSubmit={handleSubmit} handleChange={handleChange} errors={errors}/>;
+  return <SearchBar handleSubmit={handleSubmit} handleChange={handleChange} />;
 };
 
 export default SearchBarContainer;

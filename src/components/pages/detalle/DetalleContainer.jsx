@@ -49,7 +49,6 @@ const DetalleContainer = () => {
         let refDoc = doc(coleccion, id)
         getDoc(refDoc).then((elemento) => {setSeleccionado({...elemento.data(), id: elemento.id})}).catch((err)=>{console.log(err)})
 
-        //ver qué poner en el error
 
 
       }, [id]);

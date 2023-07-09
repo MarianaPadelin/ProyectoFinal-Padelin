@@ -10,7 +10,8 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Swal from "sweetalert2";
-import { Box, CardContent, Chip, Paper, TextField } from "@mui/material";
+import { Box, CardContent, Chip, IconButton, Paper, TextField, Tooltip } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 
 const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, handleSubmit, handleChange, totalEnvio, precioFinal}) => {
@@ -51,34 +52,36 @@ const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, hand
                       </React.Fragment>
                     }
                   />
-                  <Button
-                    className="botonVolver"
-                    onClick={() => {
-                      Swal.fire({
-                        title: "¿Eliminar este producto?",
-                        icon: "warning",
-                        showCancelButton: true,
-                        background: "lightGrey",
-                        confirmButtonColor: "cadetBlue",
-                        cancelButtonColor: "lightCoral",
-                        confirmButtonText: "Eliminar",
-                        cancelButtonText: "Cancelar",
-                      }).then((result) => {
-                        if (result.isConfirmed) {
-                          eliminarElemento(producto.id);
-                          Swal.fire({
-                            title: "Listo",
-                            text: "Se eliminó el producto",
-                            icon: "success",
-                            background: "lightGrey",
-                            confirmButtonColor: "cadetBlue",
-                          });
-                        }
-                      });
-                    }}
-                  >
-                    X
-                  </Button>
+
+                  <Tooltip title="Eliminar" className="tacho">
+                    <IconButton
+                      onClick={() => {
+                        Swal.fire({
+                          title: "¿Eliminar este producto?",
+                          icon: "warning",
+                          showCancelButton: true,
+                          background: "lightGrey",
+                          confirmButtonColor: "cadetBlue",
+                          cancelButtonColor: "lightCoral",
+                          confirmButtonText: "Eliminar",
+                          cancelButtonText: "Cancelar",
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            eliminarElemento(producto.id);
+                            Swal.fire({
+                              title: "Listo",
+                              text: "Se eliminó el producto",
+                              icon: "success",
+                              background: "lightGrey",
+                              confirmButtonColor: "cadetBlue",
+                            });
+                          }
+                        });
+                      }}
+                    >
+                      <DeleteIcon />
+                    </IconButton>
+                  </Tooltip>
                 </ListItem>
                 <Divider variant="inset" component="li" />
               </List>

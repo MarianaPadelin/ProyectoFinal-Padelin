@@ -10,7 +10,6 @@ export const Contador = ({ stock, initial = 1, onAdd }) => {
       <div className="count--container">
         <Button
           className="detalle"
-          size="sm"
           variant="outline-dark"
           onClick={restar}
         >
@@ -19,7 +18,6 @@ export const Contador = ({ stock, initial = 1, onAdd }) => {
         <span>{total}</span>
         <Button
           className="detalle"
-          size="sm"
           variant="outline-dark"
           onClick={sumar}
         >

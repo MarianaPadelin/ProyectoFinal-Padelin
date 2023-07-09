@@ -1,16 +1,17 @@
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
-
+import InstagramIcon from "@mui/icons-material/Instagram";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div>
+    <div
+      style={{ marginTop: "auto", display: "flex", justifyContent: "center" }}
+    >
       <Navbar
         style={{
           backgroundColor: "CadetBlue",
-          display: "flex",
-          bottom: "0",
-          width:"94%",
-          marginTop: "auto"
+          width: "94%",
+          justifyContent: "space-evenly",
         }}
       >
         <Navbar.Brand href="#home">
@@ -26,6 +27,9 @@ const Footer = () => {
           MGGM
         </Navbar.Brand>
         <h4>Mariana Padelin - Comisión 43240</h4>
+        <Link to="https://www.instagram.com/mggmceramica/" target="_blank">
+          <InstagramIcon fontSize="large" style={{ color:"black"}} />
+        </Link>
       </Navbar>
     </div>
   );

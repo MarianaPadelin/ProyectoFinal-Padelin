@@ -1,9 +1,18 @@
-import { Box, TextField } from "@mui/material"
+import { Box, TextField, Typography } from "@mui/material";
 import { Button } from "react-bootstrap";
 
 const Checkout = ({ handleSubmit, handleChange, errors }) => {
   return (
     <div>
+
+        <Typography
+          sx={{ p: 2, border: "1px dashed grey", margin: "3vw", padding:0 }}
+          variant="h4"
+        >
+          Para completar la compra, por favor ingrese los datos que se piden a
+          continuación:
+        </Typography>
+
       <Box
         onSubmit={handleSubmit}
         component="form"
@@ -14,11 +23,10 @@ const Checkout = ({ handleSubmit, handleChange, errors }) => {
             margin: "3vw",
             display: "flex",
             alignContent: "center",
-            background:"lightgrey"
+            background: "lightgrey",
           },
         }}
       >
-  
         <TextField
           label="Nombre"
           name="nombre"
@@ -46,11 +54,9 @@ const Checkout = ({ handleSubmit, handleChange, errors }) => {
         <Button className="botonVolver" type="submit">
           Enviar
         </Button>
-
-
       </Box>
     </div>
   );
-}
+};
 
-export default Checkout
+export default Checkout;

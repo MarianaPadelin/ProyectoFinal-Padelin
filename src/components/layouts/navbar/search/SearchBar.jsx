@@ -1,27 +1,25 @@
-import { Form, Button } from "react-bootstrap";
+import { TextField } from "@mui/material";
+import { Button } from "react-bootstrap";
 
-const SearchBar = ({handleSubmit, handleChange}) => {
+
+const SearchBar = ({ handleSubmit, handleChange }) => {
   return (
-    <form
-      className="d-flex"
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSubmit
-      }}
-    >
-      <Form.Control
+    <div onSubmit={handleSubmit} className="d-flex">
+      <TextField
         placeholder="Buscar producto"
-        className="me-2"
-        aria-label="Buscar"
-        name="busqueda"
         onChange={handleChange}
-        style={{ backgroundColor: "lightcoral", paddingInline: "1vw" }}
-      />
-      <Button type="submit" variant="outline-dark">
+        name="searchbar"
+        style={{
+          backgroundColor: "lightcoral",
+          paddingInline: "1vw",
+          maxHeight: 50,
+        }}
+      ></TextField>
+      <Button className="botonComprar" size="sm" type="submit">
         Buscar
       </Button>
-    </form>
+    </div>
   );
-}
+};  
 
-export default SearchBar
+export default SearchBar;

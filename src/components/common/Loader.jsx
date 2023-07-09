@@ -2,14 +2,11 @@ import { PulseLoader } from "react-spinners";
 
 const Loader = () => {
   return (
-    <div>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
-          marginTop: "auto",
-          marginBottom: "auto",
+          marginTop:"20vh"
         }}
       >
         <PulseLoader
@@ -19,7 +16,6 @@ const Loader = () => {
           size={30}
         />
       </div>
-    </div>
   );
 };
 

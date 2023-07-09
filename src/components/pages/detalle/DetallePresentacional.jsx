@@ -36,23 +36,29 @@ export const DetallePresentacional = ({seleccionado, cantidadDeProductos, onAdd}
             </Carousel.Item>
           </Carousel>
           <br></br>
-          <Card.Text as="h4">
-            <b>{seleccionado.description}</b>
-          </Card.Text>
-          <Card.Title>CATEGORÍA: {seleccionado.category}</Card.Title>
-          <Card.Title>LÍNEA: {seleccionado.linea}</Card.Title>
-          <br></br>
-          <Card.Title as="h3">
-            ${seleccionado.price}
+          <div style={{ marginLeft: "3vw" }}>
+            <Card.Text as="h4">
+              <b>{seleccionado.description}</b>
+            </Card.Text>
+            <Card.Title>CATEGORÍA: {seleccionado.category}</Card.Title>
+            <Card.Title>LÍNEA: {seleccionado.linea}</Card.Title>
+            <br></br>
+
             {seleccionado.stock > 0 ? (
-              <Contador
-                stock={seleccionado.stock}
-                initial={cantidadDeProductos}
-                onAdd={onAdd}
-              />
-            ): <Card.Footer as="h3">SIN STOCK</Card.Footer>}
-          </Card.Title>
-          <br></br>
+              <div>
+                <Card.Title as="h3">${seleccionado.price} </Card.Title>
+                <Contador
+                  stock={seleccionado.stock}
+                  initial={cantidadDeProductos}
+                  onAdd={onAdd}
+                />
+              </div>
+            ) : (
+              <Card.Footer as="h3">SIN STOCK</Card.Footer>
+            )}
+
+            <br></br>
+          </div>
           <Link to="/">
             <Button className="botonVolver">Volver</Button>
           </Link>

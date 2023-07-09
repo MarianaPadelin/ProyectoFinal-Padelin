@@ -8,7 +8,7 @@ const CarritoVacio = () => {
         <img
           src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1688329402/productos/carritoVacio_ziyhxi.png"
           width="200"
-          style={{ margin: "3vw" }}
+          style={{ margin: "3vw"}}
         ></img>
         <h2>El carrito está vacío</h2>
         <h4>¡Mirá todos los productos que hay para llenarlo!</h4>
