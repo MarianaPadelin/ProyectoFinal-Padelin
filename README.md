@@ -30,7 +30,7 @@
 
 # Se puede ver el deploy del proyecto en el siguiente link:
 
-## `<link>` : https://pre-entrega2-padelin-a8kh2bbnc-marianapadelin.vercel.app/
+## `<link>` : https://pre-entrega2-padelin-git-main-marianapadelin.vercel.app/
 
 ## Además , dentro de la carpeta "src" encontrarán un video mostrando la navegabilidad de la página.
 -------------
