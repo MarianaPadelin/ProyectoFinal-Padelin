@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Carrito from "./Carrito";
 import { CartContext } from "../../../context/CartContext";
 import CarritoVacio from "./CarritoVacio";
@@ -38,7 +38,8 @@ const CarritoContainer = () => {
   let darPrecioTotal = totalPrecio();
   let darPesoTotal = totalPeso();
   let totalEnvio = costoEnvio();
-  let precioFinal = sumaPrecios();
+
+  const[descuentoAplicado, setDescuentoAplicado] = useState(null)
 
   const { handleSubmit, handleChange } = useFormik({
     initialValues: {
@@ -54,6 +55,7 @@ const CarritoContainer = () => {
            background: "lightGrey",
            confirmButtonColor: "cadetBlue",
          });
+         setDescuentoAplicado(precioConDescuento)
       } else {
         Swal.fire({
           icon: "error",
@@ -62,9 +64,13 @@ const CarritoContainer = () => {
           background: "lightGrey",
           confirmButtonColor: "cadetBlue",
         });
+        setDescuentoAplicado(darPrecioTotal)
       }
     },
   });
+
+
+  let precioFinal = descuentoAplicado ? (descuentoAplicado + totalEnvio) : sumaPrecios()
 
   return (
     <>

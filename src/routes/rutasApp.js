@@ -1,7 +1,7 @@
-import { ItemListContainer } from "../components/pages/ItemListContainer/ItemListContainer"
+import { ItemListContainer } from "../components/pages/ItemList/ItemListContainer"
 import CarritoContainer from "../components/pages/carrito/CarritoContainer";
 import CheckoutContainer from "../components/pages/checkout/CheckoutContainer";
-import DetalleContainer from "../components/pages/detalle/DetalleContainer";
+import ItemDetailContainer from "../components/pages/itemDetail/ItemDetailContainer";
 
 export const rutasApp = [
   {
@@ -22,7 +22,7 @@ export const rutasApp = [
   {
     id: "detalle",
     path: "/DetalleProducto/:id",
-    Element: DetalleContainer,
+    Element: ItemDetailContainer,
   },
   {
     id: "carrito",

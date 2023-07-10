@@ -5,7 +5,6 @@ import { CartWidget } from "./CartWidget.jsx";
 import Image from "react-bootstrap/Image";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import SearchBar from "./search/SearchBar.jsx";
 import { categorias } from "../../../routes/categorias.js";
 import { lineas } from "../../../routes/lineas.js";
 
@@ -29,7 +28,7 @@ export const Navegacion = () => {
         <Link to="/" title="Home">
           <Navbar.Brand id="titulo">MGGM</Navbar.Brand>
         </Link>
-
+        <i>Cerámica artesanal - Patagonia Argentina</i>
         <NavDropdown
           style={{ paddingInline: "1vw" }}
           menuVariant="dark"
@@ -53,7 +52,6 @@ export const Navegacion = () => {
               {title}
             </Link>
           ))}
-         
         </NavDropdown>
         <NavDropdown
           style={{ paddingInline: "1vw" }}
@@ -71,8 +69,6 @@ export const Navegacion = () => {
             Visitá nuestro instagram
           </NavDropdown.Item>
         </NavDropdown>
-
-        <SearchBar />
         <CartWidget />
       </Container>
     </Navbar>

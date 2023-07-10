@@ -8,40 +8,36 @@ import { useContext, useState } from "react";
 import CompraExitosa from "./CompraExitosa";
 import Swal from "sweetalert2";
 
+
 const CheckoutContainer = () => {
     const {cart, totalPrecio, limpiarCarrito} = useContext( CartContext)
     let total = totalPrecio()
     const [ordenID, setOrdenID] = useState(null)
     const { handleChange, handleSubmit, errors } = useFormik({
         initialValues: {
-        nombre: "123",
+        nombre: "",
         email: "",
         telefono: "",
         },
     //infoDelComprador son los initialValues con la info ya completada por el usuario
     onSubmit: (infoDelComprador) => {
-        let timerInterval;
-        Swal.fire({
-          title: "Preparando la compra",
-          timer: 2000,
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "center",
+          showConfirmButton: false,
+          timer: 3000,
           timerProgressBar: true,
-          background: "lightGrey",
-          color:"cadetBlue",
-          didOpen: () => {
-            Swal.showLoading();
-            const b = Swal.getHtmlContainer().querySelector("b");
-            timerInterval = setInterval(() => {
-              b.textContent = Swal.getTimerLeft();
-            }, 100);
+
+          color: "cadetBlue",
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
           },
-          willClose: () => {
-            clearInterval(timerInterval);
-          },
-        }).then((result) => {
-          /* Read more about handling dismissals below */
-          if (result.dismiss === Swal.DismissReason.timer) {
-            console.log("I was closed by the timer");
-          }
+        });
+
+        Toast.fire({
+          icon: "info",
+          title: "Preparando la compra",
         });
 
         let ordenDeCompra = {

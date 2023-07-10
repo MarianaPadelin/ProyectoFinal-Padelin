@@ -1,18 +1,15 @@
 import Image from "react-bootstrap/Image";
 import ProductCard from "../../common/ProductCard/ProductCard";
-import "./ItemList.css"
+import "./ItemList.css";
 import { AnimateKeyframes } from "react-simple-animate";
 
-
-export const ItemListPresentacional = ({greeting, items}) => {
+export const ItemList = ({ greeting, items }) => {
   return (
     <div>
       <AnimateKeyframes
         play
         duration={5}
         keyframes={["opacity: 0", "opacity: 1"]}
-
-       
       >
         <div className="greeting">
           <Image

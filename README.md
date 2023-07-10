@@ -20,6 +20,14 @@
  
 -------------
 
+## Al momento de ir al carrito, se puede aplicar un 10% de descuento usando el código:
+
+ ``` MARGACERAMICA ```
+
+ ### También agregué un costo de envío, que está basado en el costo de las encomiendas de Correo Argentino, que varía dependiendo de su peso en kg. Para eso en la base de datos le asigné un peso a cada producto y armé una función que sume los pesos de los productos seleccionados. 
+
+-------------
+
 # Se puede ver el deploy del proyecto en el siguiente link:
 
 ## `<link>` : https://pre-entrega2-padelin-a8kh2bbnc-marianapadelin.vercel.app/

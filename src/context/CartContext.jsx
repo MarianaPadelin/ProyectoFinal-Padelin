@@ -5,7 +5,6 @@ export const CartContext = createContext();
 
 //creo un componente que va a ser el proveedor del contexto
 export const CartContextProvider = ({ children }) => {
-//   const [cart, setCart] = useState([]);
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
   );
@@ -82,6 +81,8 @@ const agregarProductos =(nuevo)=> {
     }, 0)
     return total}
 
+
+    //el costo de envío está basado en el costo de las encomiendas de Correo Argentino, que varía dependiendo de su peso en kg. 
 const costoEnvio = () => {
     if (totalPeso() < 1){
         return 2340

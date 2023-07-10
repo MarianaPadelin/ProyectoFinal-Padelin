@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react"
-import {DetallePresentacional} from "./DetallePresentacional"
+import {ItemDetail} from "./ItemDetail"
 import {useParams} from "react-router-dom"
 import { database } from "../../../firebaseConfig"
 import {collection, getDoc, doc} from "firebase/firestore"
@@ -9,7 +9,7 @@ import Swal from "sweetalert2"
 
 
 
-const DetalleContainer = () => {
+const ItemDetailContainer = () => {
       const[seleccionado, setSeleccionado] = useState({})
 
       const { id } = useParams();
@@ -56,7 +56,7 @@ const DetalleContainer = () => {
 
         return (
           <div>
-            {seleccionado.id ? (<DetallePresentacional seleccionado={seleccionado} agregarProductos={agregarProductos} cantidadDeProductos={cantidadDeProductos} onAdd={onAdd}/>) : (<Loader />) }
+            {seleccionado.id ? (<ItemDetail seleccionado={seleccionado} agregarProductos={agregarProductos} cantidadDeProductos={cantidadDeProductos} onAdd={onAdd}/>) : (<Loader />) }
           </div>
           
         )
@@ -66,4 +66,4 @@ const DetalleContainer = () => {
 
 
 
-export default DetalleContainer
+export default ItemDetailContainer

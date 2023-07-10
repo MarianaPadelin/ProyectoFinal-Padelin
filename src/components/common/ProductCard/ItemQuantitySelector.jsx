@@ -2,7 +2,7 @@ import { useCount } from "../../../hooks/useCount";
 import "./ProductCard.css";
 import { Button } from "react-bootstrap";
 
-export const Contador = ({ stock, initial = 1, onAdd }) => {
+export const ItemQuantitySelector = ({ stock, initial = 1, onAdd }) => {
   const { total, restar, sumar } = useCount(initial, stock);
 
   return (
