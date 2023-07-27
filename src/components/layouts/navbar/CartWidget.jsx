@@ -11,7 +11,7 @@ export const CartWidget = () => {
   return (
     <>
     <Link to="/Carrito">
-      <Button variant="outline-dark" style={{ marginLeft: "auto" }}>
+      <Button variant="outline-dark" style={{ marginLeft: "auto", display:"inline-flex", padding:"1vw" }}>
         <AiOutlineShoppingCart />
         <Badge pill bg="danger">
           {elementosEnCarrito}

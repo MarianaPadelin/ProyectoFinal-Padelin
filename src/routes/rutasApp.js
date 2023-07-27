@@ -1,6 +1,8 @@
+import { SearchBarContainer } from "../components/layouts/navbar/search/SearchBarContainer";
 import { ItemListContainer } from "../components/pages/ItemList/ItemListContainer"
 import CarritoContainer from "../components/pages/carrito/CarritoContainer";
 import CheckoutContainer from "../components/pages/checkout/CheckoutContainer";
+import { FormularioNuevoProductoContainer } from "../components/pages/formularioNuevoProducto/FormularioNuevoProductoContainer";
 import ItemDetailContainer from "../components/pages/itemDetail/ItemDetailContainer";
 
 export const rutasApp = [
@@ -34,7 +36,15 @@ export const rutasApp = [
     path: "/Checkout",
     Element: CheckoutContainer,
   },
-
-
+  {
+    id: "search",
+    path: "/Searchbar",
+    Element: SearchBarContainer,
+  },
+  {
+    id: "nuevo",
+    path: "/NuevoProducto",
+    Element: FormularioNuevoProductoContainer,
+  },
 ];
 

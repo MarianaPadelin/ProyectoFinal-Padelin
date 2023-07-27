@@ -7,12 +7,25 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { categorias } from "../../../routes/categorias.js";
 import { lineas } from "../../../routes/lineas.js";
-
-
+import { SearchBarContainer } from "./search/SearchBarContainer.jsx";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
+import IconoLogin from "./IconoLogin.jsx";
+import { NuevoProducto } from "./NuevoProducto.jsx";
 
 export const Navegacion = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
   return (
-    <Navbar expand="lg" style={{ display: "flex" }}>
+    <Navbar
+      expand="lg"
+      style={{ display: "flex" }}
+      id="myTopnav"
+      className="navbar"
+    >
       <Container style={{ display: "flex" }}>
         <Link to="/" className="link" title="Home">
           <Navbar.Brand>
@@ -28,48 +41,56 @@ export const Navegacion = () => {
         <Link to="/" title="Home">
           <Navbar.Brand id="titulo">MGGM</Navbar.Brand>
         </Link>
-        <i>Cerámica artesanal - Patagonia Argentina</i>
-        <NavDropdown
-          style={{ paddingInline: "1vw" }}
-          menuVariant="dark"
-          title="Productos"
-          id="basic-nav-dropdown"
-        >
-          {categorias.map(({ id, path, title }) => (
-            <Link className="dropdown-item" key={id} to={path}>
-              {title}
-            </Link>
-          ))}
-        </NavDropdown>
-        <NavDropdown
-          style={{ paddingInline: "1vw" }}
-          menuVariant="dark"
-          title="Líneas"
-          id="basic-nav-dropdown"
-        >
-          {lineas.map(({ id, path, title }) => (
-            <Link className="dropdown-item" key={id} to={path}>
-              {title}
-            </Link>
-          ))}
-        </NavDropdown>
-        <NavDropdown
-          style={{ paddingInline: "1vw" }}
-          menuVariant="dark"
-          title="Explorá"
-        >
-          <NavDropdown.Item>Novedades</NavDropdown.Item>
-          <NavDropdown.Item>Promociones</NavDropdown.Item>
-          <NavDropdown.Item>Contactanos</NavDropdown.Item>
-          <NavDropdown.Divider style={{ backgroundColor: "CadetBlue" }} />
-          <NavDropdown.Item
-            href="https://www.instagram.com/mggmceramica/"
-            target="_blank"
-          >
-            Visitá nuestro instagram
-          </NavDropdown.Item>
-        </NavDropdown>
         <CartWidget />
+        <NuevoProducto />
+        <div className="menu-icon" onClick={handleShowNavbar}>
+          <MenuIcon />
+        </div>
+
+        <Container className={`nav-elements  ${showNavbar && "active"}`}>
+          <NavDropdown
+            style={{ paddingInline: "1vw" }}
+            menuVariant="dark"
+            title="Productos"
+            id="basic-nav-dropdown"
+          >
+            {categorias.map(({ id, path, title }) => (
+              <Link className="dropdown-item" key={id} to={path}>
+                {title}
+              </Link>
+            ))}
+          </NavDropdown>
+          <NavDropdown
+            style={{ paddingInline: "1vw" }}
+            menuVariant="dark"
+            title="Líneas"
+            id="basic-nav-dropdown"
+          >
+            {lineas.map(({ id, path, title }) => (
+              <Link className="dropdown-item" key={id} to={path}>
+                {title}
+              </Link>
+            ))}
+          </NavDropdown>
+          <NavDropdown
+            style={{ paddingInline: "1vw" }}
+            menuVariant="dark"
+            title="Explorá"
+          >
+            <NavDropdown.Item>Novedades</NavDropdown.Item>
+            <NavDropdown.Item>Promociones</NavDropdown.Item>
+            <NavDropdown.Item>Contactanos</NavDropdown.Item>
+            <NavDropdown.Divider style={{ backgroundColor: "CadetBlue" }} />
+            <NavDropdown.Item
+              href="https://www.instagram.com/mggmceramica/"
+              target="_blank"
+            >
+              Visitá nuestro instagram
+            </NavDropdown.Item>
+          </NavDropdown>
+          <IconoLogin />
+          <SearchBarContainer />
+        </Container>
       </Container>
     </Navbar>
   );

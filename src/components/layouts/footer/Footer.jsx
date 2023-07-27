@@ -2,6 +2,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div
@@ -26,9 +27,12 @@ const Footer = () => {
           />{" "}
           MGGM
         </Navbar.Brand>
-        <h4>Mariana Padelin - Comisión 43240</h4>
+        <h5>
+          <i id="epigrafe">Cerámica artesanal - Patagonia Argentina</i>
+        </h5>
+
         <Link to="https://www.instagram.com/mggmceramica/" target="_blank">
-          <InstagramIcon fontSize="large" style={{ color:"black"}} />
+          <InstagramIcon fontSize="large" style={{ color: "black" }} />
         </Link>
       </Navbar>
     </div>

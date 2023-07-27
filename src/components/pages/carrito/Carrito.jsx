@@ -16,7 +16,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, handleSubmit, handleChange, totalEnvio, precioFinal}) => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+    <div style={{ display: "flex", justifyContent: "space-evenly" }} className="bodyCarrito">
       <div>
         {cart.map((producto) => {
           return (
@@ -26,7 +26,9 @@ const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, hand
                   width: "100%",
                   maxWidth: 500,
                   bgcolor: "lightgray",
-                  margin: "3vw",
+                 marginTop: "3vw",
+                 marginBottom:"2vw",
+                 borderRadius:"4px"
                 }}
               >
                 <ListItem alignItems="flex-start">
@@ -65,6 +67,7 @@ const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, hand
                           cancelButtonColor: "lightCoral",
                           confirmButtonText: "Eliminar",
                           cancelButtonText: "Cancelar",
+  
                         }).then((result) => {
                           if (result.isConfirmed) {
                             eliminarElemento(producto.id);

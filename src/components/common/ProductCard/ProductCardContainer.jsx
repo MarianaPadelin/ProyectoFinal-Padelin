@@ -39,7 +39,7 @@ const ProductCardContainer = () => {
       });
     };
   return (
-    <div><ProductCard  cantidadDeProductos={cantidadDeProductos} onAdd={onAdd}/></div>
+    <ProductCard  cantidadDeProductos={cantidadDeProductos} onAdd={onAdd}/>
   )
 }
 

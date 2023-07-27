@@ -1,5 +1,5 @@
 import Image from "react-bootstrap/Image";
-import ProductCard from "../../common/ProductCard/ProductCard";
+import { ProductCard } from "../../common/ProductCard/ProductCard";
 import "./ItemList.css";
 import { AnimateKeyframes } from "react-simple-animate";
 

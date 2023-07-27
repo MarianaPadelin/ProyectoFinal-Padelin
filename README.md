@@ -9,16 +9,6 @@
 
 -------------
 
-## Los datos del .env son los siguientes:
-
-#### VITE_API_KEY=  AIzaSyDflK5nma_U6CF6L49HDA6l4BIicTmiqvc
-#### VITE_AUTH_DOMAIN= mariana-a84b4.firebaseapp.com
-#### VITE_PROJECT_ID= mariana-a84b4
-#### VITE_STORAGE_BUCKET= mariana-a84b4.appspot.com
-#### VITE_MESSAGING_SENDER_ID= 830728570023
-#### VITE_APP_ID= 1:830728570023:web:e0ce7168cfacd94848c782
- 
--------------
 
 ## Al momento de ir al carrito, se puede aplicar un 10% de descuento usando el código:
 

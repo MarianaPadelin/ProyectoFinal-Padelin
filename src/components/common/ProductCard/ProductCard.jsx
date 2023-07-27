@@ -3,12 +3,11 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./ProductCard.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { AgregarStock } from "./AgregarStock";
 // import { ItemQuantitySelector } from "./ItemQuantitySelector";
 
-
-const ProductCard = ({ elemento}) => {
-
+export const ProductCard = ({ elemento }) => {
   return (
     <div>
       <Row xs={1} md={3} className="g-4">
@@ -25,15 +24,12 @@ const ProductCard = ({ elemento}) => {
                 </Button>
               </Link>
               {elemento.stock > 0 ? (
-  
-                  <Card.Footer className="precios">
-                    ${elemento.price}
-                  </Card.Footer>
-
+                <Card.Footer className="precios">${elemento.price}</Card.Footer>
               ) : (
                 <Card.Footer as="h3">SIN STOCK</Card.Footer>
               )}
             </Card.Body>
+            <AgregarStock id={elemento.id} />
           </Card>
         </Col>
       </Row>
@@ -42,4 +38,3 @@ const ProductCard = ({ elemento}) => {
 };
 
 
-export default ProductCard;
