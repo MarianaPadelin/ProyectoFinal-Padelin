@@ -10,7 +10,6 @@ import { lineas } from "../../../routes/lineas.js";
 import { SearchBarContainer } from "./search/SearchBarContainer.jsx";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import IconoLogin from "./IconoLogin.jsx";
 import { NuevoProducto } from "./NuevoProducto.jsx";
 
 export const Navegacion = () => {
@@ -88,7 +87,7 @@ export const Navegacion = () => {
               Visitá nuestro instagram
             </NavDropdown.Item>
           </NavDropdown>
-          <IconoLogin />
+
           <SearchBarContainer />
         </Container>
       </Container>
