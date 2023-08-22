@@ -7,10 +7,10 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { categorias } from "../../../routes/categorias.js";
 import { lineas } from "../../../routes/lineas.js";
-import { SearchBarContainer } from "./search/SearchBarContainer.jsx";
+// import { SearchBarContainer } from "./search/SearchBarContainer.jsx";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import { NuevoProducto } from "./NuevoProducto.jsx";
+// import { NuevoProducto } from "./NuevoProducto.jsx";
 
 export const Navegacion = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -41,7 +41,7 @@ export const Navegacion = () => {
           <Navbar.Brand id="titulo">MGGM</Navbar.Brand>
         </Link>
         <CartWidget />
-        <NuevoProducto />
+        {/* <NuevoProducto /> */}
         <div className="menu-icon" onClick={handleShowNavbar}>
           <MenuIcon />
         </div>
@@ -88,7 +88,7 @@ export const Navegacion = () => {
             </NavDropdown.Item>
           </NavDropdown>
 
-          <SearchBarContainer />
+          {/* <SearchBarContainer /> */}
         </Container>
       </Container>
     </Navbar>

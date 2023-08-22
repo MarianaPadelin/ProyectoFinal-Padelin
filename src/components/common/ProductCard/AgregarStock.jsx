@@ -21,6 +21,8 @@ export const AgregarStock = ({ id }) => {
 
   };
 
+
+//ESTO NO VA ---
   // const rellenar = () => {
   //     let products
   //     //en products poner un formulario con los campos a rellenar
