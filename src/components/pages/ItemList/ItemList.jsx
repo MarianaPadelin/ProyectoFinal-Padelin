@@ -1,35 +1,43 @@
-import Image from "react-bootstrap/Image";
+// import Image from "react-bootstrap/Image";
 import { ProductCard } from "../../common/ProductCard/ProductCard";
 import "./ItemList.css";
-import { AnimateKeyframes } from "react-simple-animate";
+import { Carousel } from "react-bootstrap";
 
-export const ItemList = ({ greeting, items }) => {
+export const ItemList = ({ imagenes, items }) => {
+
+
   return (
     <div>
-      <AnimateKeyframes
-        play
-        duration={5}
-        keyframes={["opacity: 0", "opacity: 1"]}
-      >
-        <div className="greeting">
-          <Image
-            src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1687124707/productos/WhatsApp_Image_2023-06-17_at_15.02.16_gch9zx.jpg"
-            style={{ opacity: "70%", width: "20%" }}
-            className="Imagen"
-            roundedCircle
-          />
+      <Carousel indicators={false}>
+        {imagenes.map(({ id, url }) => (
+          <Carousel.Item key={id}>
+            <img style={{ opacity: "70%", width: "100%" }} src={url}></img>
 
-          <h1>{greeting}</h1>
+            <Carousel.Caption className="textoCarrusel">
+              <div className="texto1">
+                <h3 className="titulo3">
+                  <i>Cerámica artesanal</i>
+                </h3>
+              </div>
+              <div>
+                <a className="texto2" href="#products">
+                  <h3 id="autoscroll">
+                    <b>Descubre nuestros productos</b>
+                  </h3>
 
-          <Image
-            src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1684851787/pez4jlmuc1evdofiprqx.jpg"
-            className="Imagen"
-          />
-        </div>
-      </AnimateKeyframes>
+                  <img
+                    src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698414308/uchi/iconos/arrow-down-circle_cqkmai.png"
+                    width={35}
+                  />
+                </a>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
 
       <br></br>
-      <div className="cards-container">
+      <div className="cards-container" id="products">
         {items.map((elemento) => {
           return <ProductCard key={elemento.id} elemento={elemento} />;
         })}

@@ -2,6 +2,7 @@
 import { ItemListContainer } from "../components/pages/ItemList/ItemListContainer"
 import CarritoContainer from "../components/pages/carrito/CarritoContainer";
 import CheckoutContainer from "../components/pages/checkout/CheckoutContainer";
+// import { ContactoContainer } from "../components/pages/contacto/ContactoContainer"
 import { FirebaseAuth } from "../components/pages/firebaseAuth/FirebaseAuth";
 // import { FormularioNuevoProductoContainer } from "../components/pages/formularioNuevoProducto/FormularioNuevoProductoContainer";
 import ItemDetailContainer from "../components/pages/itemDetail/ItemDetailContainer";
@@ -37,6 +38,11 @@ export const rutasApp = [
     path: "/Checkout",
     Element: CheckoutContainer,
   },
+  // {
+  //   id: "contacto",
+  //   path: "/contacto",
+  //   Element: ContactoContainer,
+  // },
   // {
   //   id: "search",
   //   path: "/Searchbar",

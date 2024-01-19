@@ -12,8 +12,6 @@
 }
 
 .precios {
-    background-color: beige;
-    opacity: 50%;
     font-weight: bold;
     border-radius: 0.5vw !important;
     margin-top: 1vw;
@@ -37,3 +35,4 @@
 .detalle{
     margin:1vw;
 }
+

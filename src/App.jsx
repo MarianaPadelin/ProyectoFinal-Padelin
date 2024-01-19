@@ -4,10 +4,11 @@ import Layouts from "./components/layouts/Layouts.jsx";
 import Error from "./components/pages/error/Error.jsx";
 import { CartContextProvider } from "./context/CartContext.jsx";
 import { rutasApp } from "./routes/rutasApp.js";
+import "./App.css"
 
 function App() {
   return (
-    <div style={{ backgroundColor: "gray",  minHeight: "100vh", display: "flex",  flexDirection: "column"}}>
+    <div className="main">
       <BrowserRouter>
         <CartContextProvider>
           <Routes>

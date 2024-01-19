@@ -3,7 +3,7 @@
     display:flex;
     align-content: center;
     justify-content: center;
-    background-color: CadetBlue;
+    background-color: lightgray;
 }
 
 .card-header {

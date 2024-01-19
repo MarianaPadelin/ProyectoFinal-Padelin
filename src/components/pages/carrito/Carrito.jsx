@@ -21,73 +21,74 @@ const Carrito = ({ cart, eliminarElemento, preguntaLimpiar, darPrecioTotal, hand
         {cart.map((producto) => {
           return (
             <div key={producto.id}>
-              <List
-                sx={{
-                  width: "100%",
-                  maxWidth: 500,
-                  bgcolor: "lightgray",
-                 marginTop: "3vw",
-                 marginBottom:"2vw",
-                 borderRadius:"4px"
-                }}
-              >
-                <ListItem alignItems="flex-start">
-                  <ListItemAvatar>
-                    <Avatar alt="Remy Sharp" src={producto.img} />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary={producto.title}
-                    secondary={
-                      <React.Fragment>
-                        {producto.description}
-                        <Typography
-                          sx={{ display: "inline" }}
-                          component="span"
-                          variant="body2"
-                          color="text.primary"
-                        >
-                          — ${producto.price}
-                        </Typography>
-                        <br></br>
-                        Cantidad:
-                        {producto.quantity}
-                      </React.Fragment>
-                    }
-                  />
+              <Paper elevation={10}>
+                <List
+                  sx={{
+                    width: "100%",
+                    maxWidth: 500,
+                    bgcolor: "lightgray",
+                    marginTop: "3vw",
+                    marginBottom: "2vw",
+                    borderRadius: "4px",
+                  }}
+                >
+                  <ListItem alignItems="flex-start">
+                    <ListItemAvatar>
+                      <Avatar alt="Remy Sharp" src={producto.img} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={producto.title}
+                      secondary={
+                        <React.Fragment>
+                          {producto.description}
+                          <Typography
+                            sx={{ display: "inline" }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                          >
+                            — ${producto.price}
+                          </Typography>
+                          <br></br>
+                          Cantidad:
+                          {producto.quantity}
+                        </React.Fragment>
+                      }
+                    />
 
-                  <Tooltip title="Eliminar" className="tacho">
-                    <IconButton
-                      onClick={() => {
-                        Swal.fire({
-                          title: "¿Eliminar este producto?",
-                          icon: "warning",
-                          showCancelButton: true,
-                          background: "lightGrey",
-                          confirmButtonColor: "cadetBlue",
-                          cancelButtonColor: "lightCoral",
-                          confirmButtonText: "Eliminar",
-                          cancelButtonText: "Cancelar",
-  
-                        }).then((result) => {
-                          if (result.isConfirmed) {
-                            eliminarElemento(producto.id);
-                            Swal.fire({
-                              title: "Listo",
-                              text: "Se eliminó el producto",
-                              icon: "success",
-                              background: "lightGrey",
-                              confirmButtonColor: "cadetBlue",
-                            });
-                          }
-                        });
-                      }}
-                    >
-                      <DeleteIcon />
-                    </IconButton>
-                  </Tooltip>
-                </ListItem>
-                <Divider variant="inset" component="li" />
-              </List>
+                    <Tooltip title="Eliminar" className="tacho">
+                      <IconButton
+                        onClick={() => {
+                          Swal.fire({
+                            title: "¿Eliminar este producto?",
+                            icon: "warning",
+                            showCancelButton: true,
+                            background: "lightGrey",
+                            confirmButtonColor: "cadetBlue",
+                            cancelButtonColor: "lightCoral",
+                            confirmButtonText: "Eliminar",
+                            cancelButtonText: "Cancelar",
+                          }).then((result) => {
+                            if (result.isConfirmed) {
+                              eliminarElemento(producto.id);
+                              Swal.fire({
+                                title: "Listo",
+                                text: "Se eliminó el producto",
+                                icon: "success",
+                                background: "lightGrey",
+                                confirmButtonColor: "cadetBlue",
+                              });
+                            }
+                          });
+                        }}
+                      >
+                        <DeleteIcon />
+                      </IconButton>
+                    </Tooltip>
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+                </List>
+              </Paper>
             </div>
           );
         })}

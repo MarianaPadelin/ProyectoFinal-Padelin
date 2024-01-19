@@ -6,10 +6,26 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import Loader from "../../common/Loader";
 
 export const ItemListContainer = () => {
-  let greeting = "¡Bienvenidos al sitio!";
+
   const [items, setItems] = useState([]);
   const { nombreCategoria } = useParams();
   const { nombreLinea } = useParams();
+
+    const imagenes = [
+      {
+        id: "img1",
+        url: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1705414748/productos/c58a9ac4-01a3-4387-88ca-9f9ae6962acd_flpcon.jpg",
+      },
+      {
+        id: "img2",
+        url: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1705415691/productos/WhatsApp_Image_2024-01-16_at_11.33.18_yng8kn.jpg",
+      },
+      {
+        id: "img3",
+        url: "https://res.cloudinary.com/dvxkjikvk/image/upload/v1705415888/productos/WhatsApp_Image_2024-01-16_at_11.33.14_l9b431.jpg",
+      },
+     
+    ];
 
   useEffect(() => {
     let coleccion = collection(database, "products");
@@ -40,7 +56,7 @@ export const ItemListContainer = () => {
     <div>
       {items.length > 0 ? (
         <div>
-          <ItemList greeting={greeting} items={items} />
+          <ItemList imagenes={imagenes} items={items} />
         </div>
       ) : (
         <Loader />

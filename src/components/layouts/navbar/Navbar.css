@@ -1,4 +1,117 @@
-.navbar{
+
+.Navbar {
+  padding: 48px; 
+  color: #3a3a3a;
+  background-color: whitesmoke;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.me-auto {
+  gap: 48px;
+}
+
+
+.dropdown {
+  font-size: 28px;
+}
+
+.dropdown2{
+  font-size: 24px;
+}
+
+.logoNavbar {
+  height: 100px;
+}
+.Container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 28px;
+}
+
+.Container2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3vw;
+}
+
+.cartWidget {
+  height: 42px;
+  margin-left: auto;
+  display: inline-flex;
+  padding: 1vw;
+  align-items: center;
+  border-width: 3px;
+} 
+
+.logoYCarrito{
+  display: flex;
+  align-items: center;
+  
+}
+
+
+
+ @media only screen and (max-width: 768px) { 
+  .Navbar{
+    padding:10px;
+ 
+  }
+
+   .Container{
+    padding: 5px; 
+  } 
+
+  .Container2{
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  .logoYCarrito{
+    justify-content:center;
+    padding: 0px;
+    background-color: white;
+    width: 100%;
+  
+}
+
+  .me-auto{
+    background-color: #cdd2c2;
+    color:#3a3a3a;
+    font-size: 24px;
+    /* height: 800px; */
+    gap:14px;
+    margin:0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+  } 
+  
+  .nav-item{
+    font-size: 24px;
+  }
+  
+.logoNavbar{
+  height: 8vh;
+  width: 8vh;
+
+}
+
+  .cartWidget{
+    height: 8vh;
+    border-width: 1px;
+  }
+
+} 
+
+
+/* .navbar{
     background-color: lightcoral;
     margin-left: 3vw;
     margin-right: 3vw;
@@ -120,4 +233,5 @@ a:hover {
   }
 }
 
+ */
 
