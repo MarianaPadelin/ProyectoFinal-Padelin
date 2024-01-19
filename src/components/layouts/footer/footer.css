@@ -1,0 +1,82 @@
+.footer__top__icon {
+  width: 50px;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: #ffffff;
+  color: #3a3a3a;
+  padding-bottom: 48px;
+  padding-top: 48px;
+}
+
+.contactoFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 8px;
+}
+
+.soloTitulo {
+  font-size: 25px;
+  padding: 0;
+}
+
+.mediosDeContacto {
+  display: flex;
+  gap: 96px;
+}
+
+.redes2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .contactoFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    font-size: 18px !important;
+ 
+  }
+  .mediosDeContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .redes{
+    padding-bottom: 2px;
+  }
+  .soloTitulo{
+    margin-bottom: 8px;
+  }
+  .parrafoFooter{
+    margin-bottom: 8px!important;
+
+  }
+}
+
+
+
+/* lo viejo:
+
+.divFooter {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.navFooter {
+    background-image: linear-gradient(lightgray,CadetBlue);
+    width: 94%;
+    justify-content: space-evenly;
+} */

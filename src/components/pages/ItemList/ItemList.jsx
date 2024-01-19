@@ -22,7 +22,7 @@ export const ItemList = ({ imagenes, items }) => {
               <div>
                 <a className="texto2" href="#products">
                   <h3 id="autoscroll">
-                    <b>Descubre nuestros productos</b>
+                    <i>Descubre nuestros productos</i>
                   </h3>
 
                   <img
