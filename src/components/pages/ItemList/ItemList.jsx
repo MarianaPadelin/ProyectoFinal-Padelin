@@ -1,4 +1,5 @@
 // import Image from "react-bootstrap/Image";
+import { Paper } from "@mui/material";
 import { ProductCard } from "../../common/ProductCard/ProductCard";
 import "./ItemList.css";
 import { Carousel } from "react-bootstrap";
@@ -39,7 +40,11 @@ export const ItemList = ({ imagenes, items }) => {
       <br></br>
       <div className="cards-container" id="products">
         {items.map((elemento) => {
-          return <ProductCard key={elemento.id} elemento={elemento} />;
+          return (
+            <Paper elevation={10} key={elemento.id}>
+              <ProductCard elemento={elemento} />
+            </Paper>
+          );
         })}
       </div>
     </div>

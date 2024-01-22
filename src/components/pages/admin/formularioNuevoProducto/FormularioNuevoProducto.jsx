@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 export const FormularioNuevoProducto = ({ handleSubmit, handleChange }) => {
   return (
     <div>
-      <h2 style={{ display: "flex", justifyContent: "center" }}>
+      <h2 style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
         Ingresar los datos del nuevo producto
       </h2>
 

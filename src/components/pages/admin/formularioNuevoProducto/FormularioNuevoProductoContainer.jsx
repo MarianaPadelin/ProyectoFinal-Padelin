@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { database } from "../../../firebaseConfig";
+import { database } from "../../../../firebaseConfig";
 import { FormularioNuevoProducto } from "./FormularioNuevoProducto";
 import { addDoc, collection } from "firebase/firestore";
 import Swal from "sweetalert2";

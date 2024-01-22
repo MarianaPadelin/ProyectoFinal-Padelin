@@ -1,20 +1,30 @@
-import {TextField } from "@mui/material"
+import { TextField } from "@mui/material";
+import "./Register.css"
 import { Button } from "react-bootstrap";
-import "./Login.css"
 import { Link } from "react-router-dom";
 
-const Login = ({handleSubmit, handleChange, errors}) => {
-    
+
+const Register = ({ handleSubmit, handleChange, errors }) => {
   return (
     <div className="camposFormulario">
-      <form onSubmit={handleSubmit}>
+      <form className="formRegister" onSubmit={handleSubmit}>
         <TextField
-          placeholder="usuario"
-          label="usuario"
-          name="usuario"
+          placeholder="nombre"
+          label="nombre"
+          name="nombre"
           variant="outlined"
-          error={errors.usuario ? true : false}
-          helperText={errors.usuario}
+          error={errors.nombre ? true : false}
+          helperText={errors.nombre}
+          onChange={handleChange}
+        />
+
+        <TextField
+          placeholder="email"
+          label="email"
+          name="email"
+          variant="outlined"
+          error={errors.email ? true : false}
+          helperText={errors.email}
           onChange={handleChange}
         />
         <TextField
@@ -33,14 +43,14 @@ const Login = ({handleSubmit, handleChange, errors}) => {
           size="lg"
           style={{ margin: 5, backgroundColor: "lightcoral" }}
         >
-          Ingresar
+          Registrarse
         </Button>
       </form>
-      <Link to="/Registro">
-        <p>¿Aún no tenés cuenta? Registrate </p>
+      <Link to="/Login">
+        <p>¿Ya tenés cuenta? Iniciá sesión</p>
       </Link>
     </div>
   );
-}
+};
 
-export default Login
+export default Register

@@ -2,7 +2,7 @@ import { useFormik } from "formik"
 import Login from "./Login"
 import * as Yup from "yup"
 import { useNavigate } from "react-router-dom";
-import { ingresar } from "../../../firebaseConfig";
+// import { ingresar } from "../../../firebaseConfig";
 
 const LoginContainer = () => {
     const navigate = useNavigate()
@@ -13,9 +13,10 @@ const LoginContainer = () => {
         contraseña: "",
       },
       onSubmit: async(data) => {
-            let res = await ingresar(data)
-            console.log(res)
-            //serUser(res)
+            // let res = await ingresar(data)
+            // console.log(res)
+            //serUser(res
+            console.log(data)
             navigate("/")
         },
        

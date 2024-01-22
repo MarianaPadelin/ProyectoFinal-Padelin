@@ -5,6 +5,8 @@ import "./Navbar.css";
 import { CartWidget } from "./CartWidget.jsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NuevoProducto } from "./NuevoProducto.jsx";
+import IconoLogin from "./IconoLogin.jsx";
 
 export function Navegacion() {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -35,6 +37,8 @@ export function Navegacion() {
             <NavbarDesktop />
           </Navbar.Collapse>
           <CartWidget className="cartWidget" />
+           <NuevoProducto />
+           <IconoLogin />
         </Container>
       </Container>
     </Navbar>

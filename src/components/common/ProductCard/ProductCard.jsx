@@ -4,8 +4,8 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-// import { AgregarStock } from "./AgregarStock";
-// import { QuitarProducto } from "./QuitarProducto";
+import { AgregarStock } from "./AgregarStock";
+import { QuitarProducto } from "./QuitarProducto";
 
 
 export const ProductCard = ({ elemento }) => {
@@ -14,9 +14,8 @@ export const ProductCard = ({ elemento }) => {
       <Row xs={1} md={3} className="g-4">
         <Col>
           <Card className="tarjeta">
-            {/* <QuitarProducto id={elemento.id}  style={{}}/> */}
             <Card.Img className="imgTarjeta" variant="top" src={elemento.img} />
-
+            <QuitarProducto id={elemento.id} />
             <Card.Body>
               <Card.Title>{elemento.title}</Card.Title>
               <Card.Text>{elemento.description}</Card.Text>
@@ -32,7 +31,7 @@ export const ProductCard = ({ elemento }) => {
                 <Card.Footer as="h3">SIN STOCK</Card.Footer>
               )}
             </Card.Body>
-            {/* <AgregarStock id={elemento.id} /> */}
+            <AgregarStock id={elemento.id} />
           </Card>
         </Col>
       </Row>
