@@ -1,9 +1,19 @@
 .contacto {
   background-color: #ffffff;
-  min-height: 100vh;
+  margin: 30px;
   color: #3a3a3a;
   display: flex;
-  width: 486px;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.titulos {
+  display: flex;
+  flex-direction: column;
+ 
+  color:black;
+  width:486px;
+
 }
 .mediosContacto {
   display: flex;
@@ -19,7 +29,7 @@
 }
 
 .form {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 .input {
@@ -27,7 +37,7 @@
   border-radius: 10px;
   font-size: 20px;
   border: 1px;
-  background-color: #f6f7f4;
+  background-color: white;
   width: 486px;
   min-height: 48px;
   padding-left: 20px;
@@ -43,6 +53,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .contacto{
+    width:auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulos{
+    width: 300px;
+  }
   .form {
     margin-left: 20px;
     margin-right: 20px;
@@ -50,6 +69,6 @@
   }
 
   .input {
-    width: 350px;
+    width: 300px;
   }
 }

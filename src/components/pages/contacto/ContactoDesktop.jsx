@@ -1,4 +1,5 @@
 
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -14,12 +15,12 @@ export const ContactoDesktop = ({ sendEmail, form, nombre, email, mensaje, setNo
         </p>
 
         <span className="mediosContacto">
-          <p>+54 9 11 5573 7578</p>
-          <p>hola@uchi.com.ar</p>
+          <p>celular</p>
+          <p>mail</p>
 
           <Link
             style={{ color: "inherit", textDecoration: "none" }}
-            to="https://wa.me/541155737578?text=Buenos días. Estoy interesado en información sobre"
+            to="https://wa.me/NUMERODEWHATSAPP?text=Buenos días. Estoy interesado en información sobre"
             target="_blank"
           >
             <p>
@@ -27,30 +28,16 @@ export const ContactoDesktop = ({ sendEmail, form, nombre, email, mensaje, setNo
               Whatsapp
             </p>
           </Link>
-        </span>
-        <div className="redesContacto">
           <Link
             style={{ color: "inherit" }}
-            to="https://www.youtube.com/channel/UCZyzYTcjeYO-M1M48_XiM2Q"
-            target="_blank"
-          >
-            <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319397/uchi/iconos/youtube_qrzg9k.png" />
-          </Link>
-          <Link
-            style={{ color: "inherit" }}
-            to="https://www.instagram.com/uchi__ar/"
+            to="https://www.instagram.com/mggmceramica/"
             target="_blank"
           >
             <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319462/uchi/iconos/instagram_dhprrb.png" />
+            Instagram
           </Link>
-          <Link
-            style={{ color: "inherit" }}
-            to="https://www.uchi.com.ar/"
-            target="_blank"
-          >
-            <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319400/uchi/iconos/shopping-cart_h9obws.png" />
-          </Link>
-        </div>
+        </span>
+        
 
         <form
           action="mailto:marianapadelin@gmail.com"
@@ -91,9 +78,9 @@ export const ContactoDesktop = ({ sendEmail, form, nombre, email, mensaje, setNo
             value={mensaje}
           />
           <div id="botonForm">
-            <button className="botonera" type="submit" value="Send">
+            <Button className="botonComprar" type="submit" value="Send">
               Enviar mensaje
-            </button>
+            </Button>
           </div>
         </form>
       </div>

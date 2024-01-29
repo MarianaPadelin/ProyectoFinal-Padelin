@@ -7,12 +7,11 @@ import { rutasApp } from "./routes/rutasApp.js";
 import "./App.css"
 
 function App() {
-  let password = prompt("Ingrese contraseña")
-  if (password === "holacaro"){
-    alert("bienvenido")
-  }
-  else {
-    return alert("contraseña incorrecta")
+  let password = prompt("Ingrese contraseña");
+  if (password === "holacaro") {
+    alert("bienvenido");
+  } else {
+    return alert("contraseña incorrecta");
   }
   return (
     <div className="main">

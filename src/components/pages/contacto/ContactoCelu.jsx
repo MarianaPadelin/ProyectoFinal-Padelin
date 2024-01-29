@@ -1,9 +1,10 @@
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
 export const ContactoCelu = ({ sendEmail, form, nombre, email, mensaje, setNombre, setEmail, setMensaje }) => {
   return (
-    <div>
+    <div  className="contacto">
       <div className="titulos">
         <h1 className="tituloParrafo">Contacto</h1>
         <p>
@@ -17,39 +18,28 @@ export const ContactoCelu = ({ sendEmail, form, nombre, email, mensaje, setNombr
             textAlign: "center",
           }}
         >
-          +54 9 11 5573 7578
-          <br />
-          hola@uchi.com.ar
+          celular
+      
+          mail
         </p>
 
         <div className="redesContacto">
           <Link
             style={{ color: "inherit", textDecoration: "none" }}
-            to="https://wa.me/541155737578?text=Buenos días. Estoy interesado en información sobre"
+            to="https://wa.me/NUMERODEWHATSAPP?text=Buenos días. Estoy interesado en información sobre"
             target="_blank"
           >
             <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319402/uchi/iconos/ph_whatsapp-logo-thin_ahnkdg.png" />
+          Whatsapp
           </Link>
+
           <Link
             style={{ color: "inherit" }}
-            to="https://www.youtube.com/channel/UCZyzYTcjeYO-M1M48_XiM2Q"
-            target="_blank"
-          >
-            <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319397/uchi/iconos/youtube_qrzg9k.png" />
-          </Link>
-          <Link
-            style={{ color: "inherit" }}
-            to="https://www.instagram.com/uchi__ar/"
+            to="https://www.instagram.com/mggmceramica/"
             target="_blank"
           >
             <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319462/uchi/iconos/instagram_dhprrb.png" />
-          </Link>
-          <Link
-            style={{ color: "inherit" }}
-            to="https://www.uchi.com.ar/"
-            target="_blank"
-          >
-            <img src="https://res.cloudinary.com/dvxkjikvk/image/upload/v1698319400/uchi/iconos/shopping-cart_h9obws.png" />
+          Instagram
           </Link>
         </div>
       </div>
@@ -92,9 +82,9 @@ export const ContactoCelu = ({ sendEmail, form, nombre, email, mensaje, setNombr
           value={mensaje}
         />
         <div id="botonForm">
-          <button className="botonera" type="submit" value="Send">
+          <Button className="botonComprar" type="submit" value="Send">
             Enviar mensaje
-          </button>
+          </Button>
         </div>
       </form>
     </div>
